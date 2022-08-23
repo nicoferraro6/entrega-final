@@ -1,33 +1,17 @@
-// ---Primer entrega proyecto final---
+// Ejercicio de Entrega
 
-    class Campeon{
-        constructor (pais, continente, anio){
-        this.pais = pais;
-        this.continente = continente;
-        this.vecesCampeon = anio;
 
-        this.votos = [];
-        }
+let formulario = document.getElementById("form")
 
-        agregarVoto(votos){
-            this.votos.push(votos);
-        }
+formulario.addEventListener("submit", datosForm)
 
-        eliminarVoto(votos){
-            this.votos.pop();
-        }
-    }
-    
-    
-    const campeonArgentina = new Campeon("Argentina", "America", 1986);
-
-    campeonArgentina.agregarVoto(1);
-    campeonArgentina.agregarVoto(1);
-    campeonArgentina.agregarVoto(1);
-    campeonArgentina.agregarVoto(1);
-    campeonArgentina.agregarVoto(1);
-    campeonArgentina.agregarVoto(1);
-
-    alert("Argentina campeon del 86 recibió " + campeonArgentina.votos.length + " votos");
-
-    
+function datosForm(e){
+//cancelamos por las dudas
+    e.preventDefault();
+// capturar los datos de los input
+    let datos = e.target
+// obtenemos los datos ingresados e enviados en el evento
+    console.log(datos.nombre.value)
+    console.log(datos.edad.value)
+    console.log(datos.password.value)
+}
