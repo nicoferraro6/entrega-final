@@ -7,21 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- EJERCICIO DE ENTREGA -->
+    <h1>Interactuamos con el DOM</h1>
+    <h3>Ingrese los datos de los productos a crear</h3>
 
-    <form action="" id="form">
-        <h2>Formualrio de Registro</h2>
-        <input type="text" name="name" id="nombre" placeholder="Nombre" required>
-        <input type="number" name="edad" id="edad" placeholder="Edad" required>
-        <input type="password" name="password" id="password" placeholder="Contraseña">
-        <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
-        <input type="submit" value="Registrarme">
-    </form>
+        <form action="" id="form">
+            <label for="">Nombre del producto</label>
+            <input type="text" name="producto" id="iprod">
+            <label for="">Precio del producto</label>
+            <input type="number" name="precio" id="iprecio">
+            <label for="">Detalle del producto</label>
+            <input type="text" name="detalle" id="idetalle">
+            <button type="submit" id="btnsubmit">Enviar productos a la lista</button>
+            <button type="button" id="btnMostrar">Mostrar los productos</button>
+        </form>
 
+    <div id="mostrarProdSolos"></div>
+    <div id="mostrarTodosProd"></div>
+
+    <h3>Ultimo Producto Ingresado:</h3>
+    <p><strong>Producto: </strong></p>
+    <p><strong>Precio: </strong></p>
+    <p><strong>Detalle: </strong></p>
+    
 
 
 
 
     <script src="app.js"></script>
+
 </body>
 </html>
