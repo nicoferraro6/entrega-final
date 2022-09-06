@@ -1,4 +1,7 @@
 //crear el constructor que nos sirve como referencia para nuestro objeto prod
+swal({
+    title: "Bienvenido!",
+})
 
 class Producto {
     constructor(nombre, precio, detalle){
@@ -22,6 +25,29 @@ console.log(listaProd)
 
 //defino el DOM
 
+const btn = document.getElementById("btnMostrar")
+
+
+btn.addEventListener("click", () => {
+    swal({
+        title: "Presione OK para poder ver los productos",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((aceptar)=> {
+        if(aceptar){
+            swal("Genial, has ingresado tus productos",{
+                icon:"success",
+            })
+        } else{
+            swal("Que lastima, no has ingresado ningun producto",{
+                icon: "error"
+            })
+        }
+      })
+})
+
 let form = document.getElementById('form')
 let inputProd = document.getElementById('iprod')
 
@@ -41,6 +67,8 @@ let idetalle = form.children[5].value;
 
 form.addEventListener('submit', agregarProd)
 btnMostrarProd.addEventListener('click', mostrarTodosLosProd)
+
+
 
 //funciones
 
@@ -122,3 +150,4 @@ function mostrarTodosLosProd (e){
         <p><strong>Detalle: </strong>${datos.detalle}</p> `
     }
 }
+
