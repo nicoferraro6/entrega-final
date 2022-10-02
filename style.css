@@ -2,3 +2,24 @@ table thead{
     background-color: blue;
     color: yellow;
 }
+
+form{
+    padding: 50px;
+    background-color: aquamarine;
+}
+
+.background{
+    background-color: gainsboro;
+}
+
+.titulo{
+    text-align: center;
+    padding: 15px;
+    background-color: grey;
+    color: white;
+}
+
+.subtitulo{
+    padding: 15px;
+    background-color: antiquewhite;
+}
